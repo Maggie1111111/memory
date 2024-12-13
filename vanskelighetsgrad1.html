@@ -8,11 +8,13 @@
     <script src="https://kit.fontawesome.com/f6aa59a7b7.js" crossorigin="anonymous"></script>
     <script src="script.js"></script>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Handjet:wght@100..900&display=swap');
+
         *{
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: monospace;
+            font-family: "Handjet", sans-serif;
         }
 
         img{
@@ -24,7 +26,10 @@
             justify-content: center;
             align-items: center;
             min-height: 100vh; 
-            background-color: rgb(27, 27, 87); 
+            background-color: red;
+            background-image: linear-gradient(45deg, white 25%, transparent 25.5%, transparent 50%, white 50.5%, white 75%, transparent 75.5%, transparent);
+            background-size: 50px 50px;
+             
         } 
         .container{
             position: relative;
@@ -33,46 +38,120 @@
             justify-content: center;
             align-items: center;
             gap: 30px;
-            background-color: rgb(53, 53, 111);
+            background-color: rgb(183, 4, 4);
             padding: 60px 60px;
+            border-radius: 3%;
         }
         h2{
-            font-size: 50px;
-            color: rgb(27, 27, 87);
+            font-size: 70px;
+            color: white;
             letter-spacing: 5px;
+            text-align: center;
         }
         .restart{
-            padding: 25px 30px; 
+            padding: 15px 20px; 
             height: 65px;
-            color: rgb(53, 53, 111);
+            color: rgb(124, 4, 4);
             border: none;
-            font-size: 20px;
+            font-size: 25px;
             letter-spacing: 3px;
             cursor: pointer;
             font-weight: 600;
         }
         .restart:hover{
             color: white;
-            background-color: rgb(27, 27, 87);
+            background-color: rgb(124, 4, 4);
         }
         .spill{
             width: 440px;
             height: 440px;
             display: flex;
             flex-wrap: wrap;
-            gap: 10px;
+            gap: 20px;
             transform-style: preserve-3d;
             perspective: 500px;
+            justify-content: center;
+
+        }
+        .memoryKort{
+            width: 100px;
+            border: 1px solid rgb(0, 0, 0);
+            border-radius: 5px;
+            box-shadow: 10px 10px 10px rgb(123, 4, 4);
+
+            background-color: red;
+            background-image: linear-gradient(45deg, white 25%, transparent 25.5%, transparent 50%, white 50.5%, white 75%, transparent 75.5%, transparent);
+            background-size: 50px 50px;
+            
         }
 
     </style>
 </head>
 <body>
     <div class="container">
-       <h2>MEMORY SPILL</h2> 
-       <div class="spill">
+        <h2>MEMORY SPILL</h2> 
+        <div class="spill">
+            <div class="memoryKort">
+                <img class="forside" src="">
+                <img class="bakside" src="">
+            </div>
+
+            <div class="memoryKort">
+                <img class="forside" src="">
+                <img class="bakside" src="">
+            </div>
+
+            <div class="memoryKort">
+                <img class="forside" src="">
+                <img class="bakside" src="">
+            </div>
+
+            <div class="memoryKort">
+                <img class="forside" src="">
+                <img class="bakside" src="">
+            </div>
+
+            <div class="memoryKort">
+                <img class="forside" src="">
+                <img class="bakside" src="">
+            </div>
+
+            <div class="memoryKort">
+                <img class="forside" src="">
+                <img class="bakside" src="">
+            </div>
+
+            <div class="memoryKort">
+                <img class="forside" src="">
+                <img class="bakside" src="">
+            </div>
+
+            <div class="memoryKort">
+                <img class="forside" src="">
+                <img class="bakside" src="">
+            </div>
+
+            <div class="memoryKort">
+                <img class="forside" src="">
+                <img class="bakside" src="">
+            </div>
+
+            <div class="memoryKort">
+                <img class="forside" src="">
+                <img class="bakside" src="">
+            </div>
+
+            <div class="memoryKort">
+                <img class="forside" src="">
+                <img class="bakside" src="">
+            </div>
+
+            <div class="memoryKort">
+                <img class="forside" src="">
+                <img class="bakside" src="">
+            </div>
+        </div>
         <button class="restart">Prøv På Nytt</button>
-       </div>
     </div>
 </body>
 </html>
