@@ -1,3 +1,4 @@
+//minimal css reset
 *{
     margin: 0;
     padding: 0;
@@ -7,3 +8,23 @@
 img{
     width: 100%;
 }
+
+//nav
+nav{
+    height: 70px;
+    background-color: pink;
+}
+.fa-diamond{
+    width: 30px;
+}
+
+//generelt
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: ;
+}
+
+//vanskelighetsgrad 1
