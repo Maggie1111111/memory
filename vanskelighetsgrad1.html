@@ -26,9 +26,8 @@
             justify-content: center;
             align-items: center;
             min-height: 100vh; 
-            background-color: red;
-            background-image: linear-gradient(45deg, white 25%, transparent 25.5%, transparent 50%, white 50.5%, white 75%, transparent 75.5%, transparent);
-            background-size: 50px 50px;
+            background-color: rgb(10, 10, 84);
+            flex-direction: column;
              
         } 
         .container{
@@ -38,8 +37,8 @@
             justify-content: center;
             align-items: center;
             gap: 30px;
-            background-color: rgb(183, 4, 4);
-            padding: 60px 60px;
+            background-color: rgb(55, 55, 158);
+            padding: 50px 60px;
             border-radius: 3%;
         }
         h2{
@@ -51,7 +50,7 @@
         .restart{
             padding: 15px 20px; 
             height: 65px;
-            color: rgb(124, 4, 4);
+            color: red;;
             border: none;
             font-size: 25px;
             letter-spacing: 3px;
@@ -60,7 +59,7 @@
         }
         .restart:hover{
             color: white;
-            background-color: rgb(124, 4, 4);
+            background-color: red;;
         }
         .spill{
             width: 440px;
@@ -75,83 +74,138 @@
         }
         .memoryKort{
             width: 100px;
-            border: 1px solid rgb(0, 0, 0);
             border-radius: 5px;
-            box-shadow: 10px 10px 10px rgb(123, 4, 4);
+            box-shadow: 10px 10px 10px rgb(23, 5, 105);
 
+            background-color: rgb(10, 10, 84);
+            cursor: pointer;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            transform: scale(1);
+        }
+        .memoryKort:active{
+            transform: scale(0.97);
+            transition: transform 0.2s;
+        }
+        nav{
+            height: 70px;
+            background-color: rgb(183, 4, 4);
+            width: 100%;
+            margin-bottom: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .fa-home{
+            background-color: white;
+            border-radius: 5%;
+            padding: 5px 10px;
+            color: red;
+            font-size: 30px;
+            margin-inline: 15px;
+        }
+        .fa-home:hover{
             background-color: red;
-            background-image: linear-gradient(45deg, white 25%, transparent 25.5%, transparent 50%, white 50.5%, white 75%, transparent 75.5%, transparent);
-            background-size: 50px 50px;
-            
+            color: white;
+        }
+        .fordide, .bakside{
+            width: 100%;
+            height: 100%;
+            padding: 20px;
+            position: absolute;
+            border-radius: 2%;   
+        }
+        .forside{
+            background-color: white;
+        }
+        #juleMode{
+            padding: 10px;
+            border: none;
+            color: red;
+        }
+        #juleMode:hover{
+            background-color: red;
+            color: white; 
         }
 
     </style>
 </head>
-<body>
-    <div class="container">
+<body >
+    <nav>
+        <a href="index.html">
+            <i class="fa-solid fa-home"></i>
+        </a> 
+
+
+
+     </nav>
+
+    <div id="container" class="container">
         <h2>MEMORY SPILL</h2> 
         <div class="spill">
-            <div class="memoryKort">
+            <div class="memoryKort" id="memoryKort">
                 <img class="forside" src="">
                 <img class="bakside" src="">
             </div>
 
-            <div class="memoryKort">
+            <div class="memoryKort" id="memoryKort">
                 <img class="forside" src="">
                 <img class="bakside" src="">
             </div>
 
-            <div class="memoryKort">
+            <div class="memoryKort" id="memoryKort">
                 <img class="forside" src="">
                 <img class="bakside" src="">
             </div>
 
-            <div class="memoryKort">
+            <div class="memoryKort" id="memoryKort">
                 <img class="forside" src="">
                 <img class="bakside" src="">
             </div>
 
-            <div class="memoryKort">
+            <div class="memoryKort" id="memoryKort">
                 <img class="forside" src="">
                 <img class="bakside" src="">
             </div>
 
-            <div class="memoryKort">
+            <div class="memoryKort" id="memoryKort">
                 <img class="forside" src="">
                 <img class="bakside" src="">
             </div>
 
-            <div class="memoryKort">
+            <div class="memoryKort" id="memoryKort">
                 <img class="forside" src="">
                 <img class="bakside" src="">
             </div>
 
-            <div class="memoryKort">
+            <div class="memoryKort" id="memoryKort">
                 <img class="forside" src="">
                 <img class="bakside" src="">
             </div>
 
-            <div class="memoryKort">
+            <div class="memoryKort" id="memoryKort">
                 <img class="forside" src="">
                 <img class="bakside" src="">
             </div>
 
-            <div class="memoryKort">
+            <div class="memoryKort" id="memoryKort">
                 <img class="forside" src="">
                 <img class="bakside" src="">
             </div>
 
-            <div class="memoryKort">
+            <div class="memoryKort" id="memoryKort">
                 <img class="forside" src="">
                 <img class="bakside" src="">
             </div>
 
-            <div class="memoryKort">
+            <div class="memoryKort" id="memoryKort">
                 <img class="forside" src="">
                 <img class="bakside" src="">
             </div>
         </div>
         <button class="restart">Prøv På Nytt</button>
+        <button id="juleMode" onclick="JuleMode()">Jule Mode</button>
     </div>
 </body>
 </html>
