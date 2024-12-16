@@ -43,6 +43,9 @@ function JuleMode() {
         prøvpånyttknapp.style.backgroundColor = 'white'
         prøvpånyttknapp.style.color = "red"
       })
+
+      //klokke
+      document.getElementById('klokkecss').style.color = "red"
 }
 
  //flippe kortene
