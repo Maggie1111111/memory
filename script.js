@@ -54,3 +54,21 @@ function JuleMode() {
  }
 
  kort.forEach(kortet => kortet.addEventListener('click', flipKort));
+
+ //klokke
+ const klokkeElement = document.getElementById("klokke")
+
+ let klokke = 300
+ let klokkeref = null
+
+ function tikkKlokke(){
+    klokke -= 1
+    klokkeElement.innerHTML = klokke + "sek"
+    if (klokke <= 0){
+        
+    }
+
+if (!klokkeref){
+    klokkeref = setInterval (tikkKlokke, 1000)
+}
+ }

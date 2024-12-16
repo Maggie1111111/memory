@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vanskelighetsgrad 1</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/f6aa59a7b7.js" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Handjet:wght@100..900&display=swap');
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Handjet", sans-serif;
+        }
+
+        img{
+            width: 100%;
+        }
+
+       body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh; 
+            background-color: rgb(10, 10, 84);
+            flex-direction: column;
+             
+        } 
+        .container{
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+            background-color: rgb(55, 55, 158);
+            padding: 50px 60px;
+            border-radius: 3%;
+        }
+        h2{
+            font-size: 70px;
+            color: white;
+            letter-spacing: 5px;
+            text-align: center;
+        }
+        .restart{
+            padding: 15px 20px; 
+            height: 65px;
+            color: rgb(10, 10, 84);
+            border: none;
+            font-size: 25px;
+            letter-spacing: 3px;
+            cursor: pointer;
+            font-weight: 600;
+        }
+        .restart:hover{
+            color: white;
+            background-color: rgb(10, 10, 84);
+        }
+        .spill{
+            width: 800px;
+            height: 700px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            transform-style: preserve-3d;
+            perspective: 500px;
+            justify-content: center;
+
+        }
+        .memoryKort{
+            width: 100px;
+            border-radius: 5px;
+            box-shadow: 10px 10px 10px rgb(23, 5, 105);
+            background-color: rgb(10, 10, 84) ;
+            cursor: pointer;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            transform: scale(1);
+            transform-style: preserve-3d;
+            transition: transform .5s;
+        }
+        .memoryKort:active{
+            transform: scale(0.9);
+            transition: transform 0.2s;
+        }
+        .memoryKort.flip{
+          transform: rotateY(180deg);  
+        }
+        nav{
+            height: 70px;
+            background-color: rgb(55, 55, 158);
+            width: 100%;
+            margin-bottom: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .fa-home{
+            background-color: white;
+            border-radius: 5%;
+            padding: 5px 10px;
+            color: rgb(10, 10, 84);
+            font-size: 30px;
+            margin-inline: 15px;
+        }
+        .fa-home:hover{
+            background-color: rgb(10, 10, 84);
+            color: white;
+        }
+        .klokke{
+            background-color: white;
+            color: rgb(10, 10, 84);
+            border-radius: 5%;
+            padding: 5px 10px;
+            margin-inline: 15px;
+            display: flex;
+            text-align: center;
+            flex-direction: column;
+        }
+        .fordide, .bakside{
+            width: 100%;
+            height: 100%;
+            padding: 20px;
+            position: absolute;
+            border-radius: 2%;   
+        }
+        .forside{
+            background-color: white;
+        }
+        .bakside{
+            
+        }
+        #juleMode{
+            padding: 10px;
+            border: none;
+            color: red;
+        }
+        #juleMode:hover{
+            background-color: red;
+            color: white; 
+        }
+
+    </style>
+</head>
+<body >
+    <nav>
+        <a href="index.html">
+            <i class="fa-solid fa-home" id="hjemknapp"></i>
+        </a> 
+        <div class="klokke">
+            <h1>Klokke</h1>
+            <p id="klokke">4 min</p>
+        </div>
+     </nav>
+
+    <div id="container" class="container">
+        <h2>MEMORY SPILL</h2> 
+        <div class="spill">
+            <div class="memoryKort" id="memoryKort">
+                <img class="forside" src="">
+                <img class="bakside" src="">
+            </div>
+
+            <div class="memoryKort" id="memoryKort">
+                <img class="forside" src="">
+                <img class="bakside" src="">
+            </div>
+
+            <div class="memoryKort" id="memoryKort">
+                <img class="forside" src="">
+                <img class="bakside" src="">
+            </div>
+
+            <div class="memoryKort" id="memoryKort">
+                <img class="forside" src="">
+                <img class="bakside" src="">
+            </div>
+
+            <div class="memoryKort" id="memoryKort">
+                <img class="forside" src="">
+                <img class="bakside" src="">
+            </div>
+
+            <div class="memoryKort" id="memoryKort">
+                <img class="forside" src="">
+                <img class="bakside" src="">
+            </div>
+
+            <div class="memoryKort" id="memoryKort">
+                <img class="forside" src="">
+                <img class="bakside" src="">
+            </div>
+
+            <div class="memoryKort" id="memoryKort">
+                <img class="forside" src="">
+                <img class="bakside" src="">
+            </div>
+
+            <div class="memoryKort" id="memoryKort">
+                <img class="forside" src="">
+                <img class="bakside" src="">
+            </div>
+
+            <div class="memoryKort" id="memoryKort">
+                <img class="forside" src="">
+                <img class="bakside" src="">
+            </div>
+
+            <div class="memoryKort" id="memoryKort">
+                <img class="forside" src="">
+                <img class="bakside" src="">
+            </div>
+
+            <div class="memoryKort" id="memoryKort">
+                <img class="forside" src="">
+                <img class="bakside" src="">
+            </div>
+
+            <div class="memoryKort" id="memoryKort">
+                <img class="forside" src="">
+                <img class="bakside" src="">
+            </div>
+
+            <div class="memoryKort" id="memoryKort">
+                <img class="forside" src="">
+                <img class="bakside" src="">
+            </div>
+
+            <div class="memoryKort" id="memoryKort">
+                <img class="forside" src="">
+                <img class="bakside" src="">
+            </div>
+
+            <div class="memoryKort" id="memoryKort">
+                <img class="forside" src="">
+                <img class="bakside" src="">
+            </div>
+
+            <div class="memoryKort" id="memoryKort">
+                <img class="forside" src="">
+                <img class="bakside" src="">
+            </div>
+
+            <div class="memoryKort" id="memoryKort">
+                <img class="forside" src="">
+                <img class="bakside" src="">
+            </div>
+
+            <div class="memoryKort" id="memoryKort">
+                <img class="forside" src="">
+                <img class="bakside" src="">
+            </div>
+
+            <div class="memoryKort" id="memoryKort">
+                <img class="forside" src="">
+                <img class="bakside" src="">
+            </div>
+
+            <div class="memoryKort" id="memoryKort">
+                <img class="forside" src="">
+                <img class="bakside" src="">
+            </div>
+
+            <div class="memoryKort" id="memoryKort">
+                <img class="forside" src="">
+                <img class="bakside" src="">
+            </div>
+
+            <div class="memoryKort" id="memoryKort">
+                <img class="forside" src="">
+                <img class="bakside" src="">
+            </div>
+
+            <div class="memoryKort" id="memoryKort">
+                <img class="forside" src="">
+                <img class="bakside" src="">
+            </div>
+
+            <div class="memoryKort" id="memoryKort">
+                <img class="forside" src="">
+                <img class="bakside" src="">
+            </div>
+
+            <div class="memoryKort" id="memoryKort">
+                <img class="forside" src="">
+                <img class="bakside" src="">
+            </div>
+
+            <div class="memoryKort" id="memoryKort">
+                <img class="forside" src="">
+                <img class="bakside" src="">
+            </div>
+
+            <div class="memoryKort" id="memoryKort">
+                <img class="forside" src="">
+                <img class="bakside" src="">
+            </div>
+
+            <div class="memoryKort" id="memoryKort">
+                <img class="forside" src="">
+                <img class="bakside" src="">
+            </div>
+
+            <div class="memoryKort" id="memoryKort">
+                <img class="forside" src="">
+                <img class="bakside" src="">
+            </div>
+
+            <div class="memoryKort" id="memoryKort">
+                <img class="forside" src="">
+                <img class="bakside" src="">
+            </div>
+
+            <div class="memoryKort" id="memoryKort">
+                <img class="forside" src="">
+                <img class="bakside" src="">
+            </div>
+
+            <div class="memoryKort" id="memoryKort">
+                <img class="forside" src="">
+                <img class="bakside" src="">
+            </div>
+
+            <div class="memoryKort" id="memoryKort">
+                <img class="forside" src="">
+                <img class="bakside" src="">
+            </div>
+
+            <div class="memoryKort" id="memoryKort">
+                <img class="forside" src="">
+                <img class="bakside" src="">
+            </div>
+
+            <div class="memoryKort" id="memoryKort">
+                <img class="forside" src="">
+                <img class="bakside" src="">
+            </div>
+
+        </div>
+        <button class="restart" id="restart">Prøv På Nytt</button>
+        <button id="juleMode" onclick="JuleMode()">Jule Mode</button>
+    </div>
+</body>
+</html>
