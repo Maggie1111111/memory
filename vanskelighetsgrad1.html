@@ -50,7 +50,7 @@
         .restart{
             padding: 15px 20px; 
             height: 65px;
-            color: red;;
+            color: rgb(10, 10, 84);
             border: none;
             font-size: 25px;
             letter-spacing: 3px;
@@ -59,7 +59,7 @@
         }
         .restart:hover{
             color: white;
-            background-color: red;;
+            background-color: rgb(10, 10, 84);
         }
         .spill{
             width: 440px;
@@ -70,23 +70,28 @@
             transform-style: preserve-3d;
             perspective: 500px;
             justify-content: center;
+            perspective: 1000px;
 
         }
         .memoryKort{
             width: 100px;
             border-radius: 5px;
             box-shadow: 10px 10px 10px rgb(23, 5, 105);
-
-            background-color: rgb(10, 10, 84);
+            background-color: rgb(10, 10, 84) ;
             cursor: pointer;
             position: relative;
             display: flex;
             flex-direction: column;
             transform: scale(1);
+            transform-style: preserve-3d;
+            transition: transform .5s;
         }
         .memoryKort:active{
             transform: scale(0.9);
             transition: transform 0.2s;
+        }
+        .memoryKort.flip{
+          transform: rotateY(180deg);  
         }
         nav{
             height: 70px;
@@ -101,12 +106,12 @@
             background-color: white;
             border-radius: 5%;
             padding: 5px 10px;
-            color: red;
+            color: rgb(10, 10, 84);
             font-size: 30px;
             margin-inline: 15px;
         }
         .fa-home:hover{
-            background-color: red;
+            background-color: rgb(10, 10, 84);
             color: white;
         }
         .fordide, .bakside{
@@ -118,6 +123,9 @@
         }
         .forside{
             background-color: white;
+        }
+        .bakside{
+            
         }
         #juleMode{
             padding: 10px;
@@ -132,9 +140,9 @@
     </style>
 </head>
 <body >
-    <nav id="myNav">
+    <nav>
         <a href="index.html">
-            <i class="fa-solid fa-home"></i>
+            <i class="fa-solid fa-home" id="hjemknapp"></i>
         </a> 
 
 
@@ -204,7 +212,7 @@
                 <img class="bakside" src="">
             </div>
         </div>
-        <button class="restart">Prøv På Nytt</button>
+        <button class="restart" id="restart">Prøv På Nytt</button>
         <button id="juleMode" onclick="JuleMode()">Jule Mode</button>
     </div>
 </body>
