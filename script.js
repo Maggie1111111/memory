@@ -9,7 +9,13 @@ function JuleMode() {
     document.getElementById("container").style.backgroundColor = "rgb(183, 4, 4)"
 
     //kort mønster
-
+    const baksideElements = document.getElementsByClassName("bakside");
+    for (let i = 0; i < baksideElements.length; i++) {
+        baksideElements[i].style.backgroundColor = "red";
+        baksideElements[i].style.backgroundImage = "linear-gradient(45deg, white 25%, transparent 25.5%, transparent 50%, white 50.5%, white 75%, transparent 75.5%, transparent)";
+        baksideElements[i].style.backgroundSize = "50px 50px";
+        baksideElements[i].style.color = "rgb(69, 7, 7)";
+    }
 
     //queryselector velger en selector slik som nav
     document.querySelector('nav').style.backgroundColor = "rgb(183, 4, 4)"
