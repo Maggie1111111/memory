@@ -1,5 +1,5 @@
 
-function JuleMode() {
+/*function JuleMode() {
     //bakgrunnsmønster
     document.body.style.backgroundColor = "red"
     document.body.style.backgroundImage = "linear-gradient(45deg, white 25%, transparent 25.5%, transparent 50%, white 50.5%, white 75%, transparent 75.5%, transparent)"
@@ -50,34 +50,37 @@ function JuleMode() {
         prøvpånyttknapp.style.color = "red"
       })
 
+      //julemodus knapp toggle
+
       //klokke
       document.getElementById('klokkecss').style.color = "red"
-}
+}*/
 
- //flippe kortene
+//flippe kortene
+const kort = document.querySelectorAll('.memoryKort');
 
- const kort = document.querySelectorAll('.memoryKort');
+function flipKort() { this.classList.toggle('flip'); }
 
- function flipKort() {
- this.classList.toggle('flip');
- }
+kort.forEach(kortet => kortet.addEventListener('click', flipKort));
 
- kort.forEach(kortet => kortet.addEventListener('click', flipKort));
+//klokke const klokkeElement = document.getElementById("klokke")
 
- //klokke
- const klokkeElement = document.getElementById("klokke")
+let klokke = 300 
+let klokkeref = null
 
- let klokke = 300
- let klokkeref = null
-
- function tikkKlokke(){
-    klokke -= 1
-    klokkeElement.innerHTML = klokke + "sek"
+function tikkKlokke(){ klokke -= 1 
+    klokkeElement.innerHTML = klokke + "sek" 
     if (klokke <= 0){
-        
     }
+    if (!klokkeref){ klokkeref = setInterval (tikkKlokke, 1000) } }
 
-if (!klokkeref){
-    klokkeref = setInterval (tikkKlokke, 1000)
-}
- }
+    document.addEventListener('DOMContentLoaded', () => {
+        const julemodeElement = document.getElementById('juleMode')
+        const bodyElement = document.body
+
+        if (julemodeElement) {
+            julemodeElement.addEventListener('click', () => {
+                bodyElement.classList.toggle('jule-modus')
+            });
+        }
+    }); 

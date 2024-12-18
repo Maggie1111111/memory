@@ -143,11 +143,72 @@
         #juleMode{
             padding: 10px;
             border: none;
+            width: 100px;
+            height: 50px;
+            border-radius: 999px;
+            display: flex;
+            padding: 4px;
+            position: relative;
+        }
+        .toggle-knapp{
+            display: flex;
+            color: white;
+            flex-direction: column;
+            text-align: center;
+        }
+        .toggleSirkel{
+            background-color: rgb(55, 55, 158);
+            width: 45px;
+            height: 45px;
+            border-radius: 999px;
+            position: absolute;
+            top: 3px;
+            cursor: pointer;
+        }
+        body.jule-modus .toggleSirkel{
+            background-color: red;
+            left: 50px; 
+        }
+        body.jule-modus {
+        background-color: red; /* Changes the background to red */
+        background-image: linear-gradient(45deg, white 25%, transparent 25.5%, transparent 50%, white 50.5%, white 75%, transparent 75.5%, transparent);
+        background-size: 50px 50px;
+        }
+
+        body.jule-modus nav {
+            background-color: rgb(183, 4, 4); /* Update nav color */
+        }
+
+        body.jule-modus .restart {
             color: red;
         }
-        #juleMode:hover{
+
+        body.jule-modus .restart:hover {
             background-color: red;
-            color: white; 
+            color: white;
+        }
+
+        body.jule-modus .fa-home {
+            color: red;
+        }
+
+        body.jule-modus .fa-home:hover {
+            background-color: red;
+            color: white;
+        }
+
+        body.jule-modus .klokke {
+            color: red;
+        }
+
+        body.jule-modus .bakside {
+            background-color: red;
+            background-image: linear-gradient(45deg, white 25%, transparent 25.5%, transparent 50%, white 50.5%, white 75%, transparent 75.5%, transparent);
+            background-size: 50px 50px;
+            color: rgb(124, 5, 5);
+        }
+        body.jule-modus .container{
+            background-color: rgb(183, 4, 4);
         }
 
     </style>
@@ -348,7 +409,15 @@
 
         </div>
         <button class="restart" id="restart">Prøv På Nytt</button>
-        <button id="juleMode" onclick="JuleMode()">Jule-Modus</button>
+
+        <div class="toggle-knapp">
+            <p>Jule-Modus</p>
+            <button id="juleMode" /*onclick="JuleMode()"*/>
+                <div class="toggleSirkel">
+
+                </div>
+            </button>
+        </div>
     </div>
 </body>
 </html>
