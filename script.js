@@ -23,6 +23,6 @@ function tikkKlokke(){ klokke -= 1
         if (julemodeElement) {
             julemodeElement.addEventListener('click', () => {
                 document.body.classList.toggle('jule-modus')
-            });
+            })
         }
-    }); 
+    })
