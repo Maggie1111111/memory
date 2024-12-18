@@ -1,36 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vanskelighetsgrad 1</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/f6aa59a7b7.js" crossorigin="anonymous"></script>
-    <script src="script.js"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Handjet:wght@100..900&display=swap');
 
-        *{
+        * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
             font-family: "Handjet", sans-serif;
         }
 
-        img{
+        img {
             width: 100%;
         }
 
-       body{
+        body {
             display: flex;
             justify-content: center;
             align-items: center;
-            min-height: 100vh; 
+            min-height: 100vh;
             background-color: rgb(10, 10, 84);
             flex-direction: column;
-             
-        } 
-        .container{
+
+        }
+
+        .container {
             position: relative;
             display: flex;
             flex-direction: column;
@@ -41,14 +42,16 @@
             padding: 50px 60px;
             border-radius: 3%;
         }
-        h2{
+
+        h2 {
             font-size: 70px;
             color: white;
             letter-spacing: 5px;
             text-align: center;
         }
-        .restart{
-            padding: 15px 20px; 
+
+        .restart {
+            padding: 15px 20px;
             height: 65px;
             color: rgb(10, 10, 84);
             border: none;
@@ -57,11 +60,13 @@
             cursor: pointer;
             font-weight: 600;
         }
-        .restart:hover{
+
+        .restart:hover {
             color: white;
             background-color: rgb(10, 10, 84);
         }
-        .spill{
+
+        .spill {
             width: 500px;
             height: 440px;
             display: flex;
@@ -72,11 +77,12 @@
             justify-content: center;
 
         }
-        .memoryKort{
+
+        .memoryKort {
             width: 100px;
             border-radius: 5px;
             box-shadow: 10px 10px 10px rgb(23, 5, 105);
-            background-color: rgb(10, 10, 84) ;
+            background-color: rgb(10, 10, 84);
             cursor: pointer;
             position: relative;
             display: flex;
@@ -85,14 +91,17 @@
             transform-style: preserve-3d;
             transition: transform .5s;
         }
-        .memoryKort:active{
+
+        .memoryKort:active {
             transform: scale(0.9);
             transition: transform 0.2s;
         }
-        .memoryKort.flip{
-          transform: rotateY(180deg);  
+
+        .memoryKort.flip {
+            transform: rotateY(180deg);
         }
-        nav{
+
+        nav {
             height: 70px;
             background-color: rgb(55, 55, 158);
             width: 100%;
@@ -101,7 +110,8 @@
             align-items: center;
             justify-content: space-between;
         }
-        .fa-home{
+
+        .fa-home {
             background-color: white;
             border-radius: 5%;
             padding: 5px 10px;
@@ -109,11 +119,13 @@
             font-size: 30px;
             margin-inline: 15px;
         }
-        .fa-home:hover{
+
+        .fa-home:hover {
             background-color: rgb(10, 10, 84);
             color: white;
         }
-        .klokke{
+
+        .klokke {
             background-color: white;
             color: rgb(10, 10, 84);
             border-radius: 5%;
@@ -123,24 +135,29 @@
             text-align: center;
             flex-direction: column;
         }
-        .fordide, .bakside{
+
+        .fordide,
+        .bakside {
             width: 100%;
             height: 100%;
             padding: 20px;
             position: absolute;
-            border-radius: 2%;   
+            border-radius: 2%;
         }
-        .forside{
+
+        .forside {
             background-color: white;
         }
-        .bakside{
+
+        .bakside {
             font-family: 'Courier New', Courier, monospace;
-            color: white; 
+            color: white;
             display: flex;
             justify-content: center;
-            align-items: center; 
+            align-items: center;
         }
-        #juleMode{
+
+        #juleMode {
             padding: 10px;
             border: none;
             width: 100px;
@@ -150,13 +167,15 @@
             padding: 4px;
             position: relative;
         }
-        .toggle-knapp{
+
+        .toggle-knapp {
             display: flex;
             color: white;
             flex-direction: column;
             text-align: center;
         }
-        .toggleSirkel{
+
+        .toggleSirkel {
             background-color: rgb(55, 55, 158);
             width: 45px;
             height: 45px;
@@ -165,18 +184,22 @@
             top: 3px;
             cursor: pointer;
         }
-        body.jule-modus .toggleSirkel{
+
+        body.jule-modus .toggleSirkel {
             background-color: red;
-            left: 50px; 
+            left: 50px;
         }
+
         body.jule-modus {
-        background-color: red; /* Changes the background to red */
-        background-image: linear-gradient(45deg, white 25%, transparent 25.5%, transparent 50%, white 50.5%, white 75%, transparent 75.5%, transparent);
-        background-size: 50px 50px;
+            background-color: red;
+            /* Changes the background to red */
+            background-image: linear-gradient(45deg, white 25%, transparent 25.5%, transparent 50%, white 50.5%, white 75%, transparent 75.5%, transparent);
+            background-size: 50px 50px;
         }
 
         body.jule-modus nav {
-            background-color: rgb(183, 4, 4); /* Update nav color */
+            background-color: rgb(183, 4, 4);
+            /* Update nav color */
         }
 
         body.jule-modus .restart {
@@ -207,28 +230,30 @@
             background-size: 50px 50px;
             color: rgb(124, 5, 5);
         }
-        body.jule-modus .container{
+
+        body.jule-modus .container {
             background-color: rgb(183, 4, 4);
         }
-        body.jule-modus .memoryKort{
-            box-shadow: 10px 10px 10px rgb(87, 2, 2);
-        }
 
+        body.jule-modus .memoryKort {
+            box-shadow: 10px 10px 10px rgb(116, 3, 3);
+        }
     </style>
 </head>
-<body >
+
+<body>
     <nav>
         <a href="index.html">
             <i class="fa-solid fa-home" id="hjemknapp"></i>
-        </a> 
+        </a>
         <div class="klokke" id="klokkecss">
             <h1>Klokke</h1>
-            <p id="klokke">3 min</p>
+            <p id="klokke">05:00</p>
         </div>
-     </nav>
+    </nav>
 
     <div id="container" class="container">
-        <h2>MEMORY SPILL</h2> 
+        <h2>MEMORY SPILL</h2>
         <div class="spill">
             <div class="memoryKort" id="memoryKort">
                 <img class="forside" src="">
@@ -320,5 +345,8 @@
             </button>
         </div>
     </div>
+
+    <script src="script.js"></script>
 </body>
+
 </html>
