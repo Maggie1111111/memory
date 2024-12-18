@@ -19,11 +19,10 @@ function tikkKlokke(){ klokke -= 1
 
     document.addEventListener('DOMContentLoaded', () => {
         const julemodeElement = document.getElementById('juleMode')
-        const bodyElement = document.body
 
         if (julemodeElement) {
             julemodeElement.addEventListener('click', () => {
-                bodyElement.classList.toggle('jule-modus')
+                document.body.classList.toggle('jule-modus')
             });
         }
     }); 
