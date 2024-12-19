@@ -143,10 +143,13 @@
             padding: 20px;
             position: absolute;
             border-radius: 2%;
+            backface-visibility: hidden;
         }
 
         .forside {
             background-color: white;
+            transform: rotateY(180deg);
+            
         }
 
         .bakside {
@@ -155,6 +158,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            
         }
 
         #juleMode {
@@ -192,9 +196,6 @@
 
         body.jule-modus {
             background-color: red;
-            /* Changes the background to red */
-            background-image: linear-gradient(45deg, white 25%, transparent 25.5%, transparent 50%, white 50.5%, white 75%, transparent 75.5%, transparent);
-            background-size: 50px 50px;
         }
 
         body.jule-modus nav {
@@ -230,6 +231,9 @@
             background-size: 50px 50px;
             color: rgb(124, 5, 5);
 
+        }
+        body.jule-modus .fordide{
+            background-color: white;
         }
 
         body.jule-modus .container {
