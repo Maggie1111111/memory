@@ -71,9 +71,10 @@
         .spill {
             width: 440px;
             height: 440px;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
+            display: grid;
+            grid-gap: 20px;
+            grid-template-columns: 100px 100px 100px;
+            grid-template-rows: 100px 100px 100px 100px;
             justify-content: center;
             perspective: 1000px;
 
@@ -96,6 +97,7 @@
         .memoryKort:active {
             transform: scale(0.9);
             transition: transform 0.2s;
+
         }
 
         .memoryKort.flip {
@@ -144,7 +146,7 @@
             padding: 20px;
             position: absolute;
             border-radius: 2%;
-            
+
         }
 
         .forside {
@@ -236,7 +238,8 @@
             color: rgb(124, 5, 5);
 
         }
-        body.jule-modus .forside{
+
+        body.jule-modus .forside {
             background-color: white;
         }
 
@@ -264,62 +267,62 @@
     <div id="container" class="container">
         <h2>MEMORY SPILL</h2>
         <div class="spill">
-            <div class="memoryKort">
+            <div class="memoryKort" data-framework="1">
                 <img class="forside" src="bilder/stickers/juletreSticker.png">
                 <h1 class="bakside">?</h1>
             </div>
 
-            <div class="memoryKort">
+            <div class="memoryKort" data-framework="1">
                 <img class="forside" src="bilder/stickers/juletreSticker.png">
                 <h1 class="bakside">?</h1>
             </div>
 
-            <div class="memoryKort">
-                 <img class="forside" src="bilder/stickers/juletreSticker.png">
-                <h1 class="bakside">?</h1>
-            </div>
-
-            <div class="memoryKort">
+            <div class="memoryKort" data-framework="2">
                 <img class="forside" src="bilder/stickers/juletreSticker.png">
                 <h1 class="bakside">?</h1>
             </div>
 
-            <div class="memoryKort">
+            <div class="memoryKort" data-framework="2">
                 <img class="forside" src="bilder/stickers/juletreSticker.png">
                 <h1 class="bakside">?</h1>
             </div>
 
-            <div class="memoryKort">
+            <div class="memoryKort" data-framework="3">
                 <img class="forside" src="bilder/stickers/juletreSticker.png">
                 <h1 class="bakside">?</h1>
             </div>
 
-            <div class="memoryKort">
+            <div class="memoryKort" data-framework="3">
                 <img class="forside" src="bilder/stickers/juletreSticker.png">
                 <h1 class="bakside">?</h1>
             </div>
 
-            <div class="memoryKort">
+            <div class="memoryKort" data-framework="4">
                 <img class="forside" src="bilder/stickers/juletreSticker.png">
                 <h1 class="bakside">?</h1>
             </div>
 
-            <div class="memoryKort">
+            <div class="memoryKort" data-framework="4">
                 <img class="forside" src="bilder/stickers/juletreSticker.png">
                 <h1 class="bakside">?</h1>
             </div>
 
-            <div class="memoryKort">
+            <div class="memoryKort" data-framework="5">
                 <img class="forside" src="bilder/stickers/juletreSticker.png">
                 <h1 class="bakside">?</h1>
             </div>
 
-            <div class="memoryKort">
+            <div class="memoryKort" data-framework="5">
                 <img class="forside" src="bilder/stickers/juletreSticker.png">
                 <h1 class="bakside">?</h1>
             </div>
 
-            <div class="memoryKort">
+            <div class="memoryKort" data-framework="6">
+                <img class="forside" src="bilder/stickers/juletreSticker.png">
+                <h1 class="bakside">?</h1>
+            </div>
+
+            <div class="memoryKort" data-framework="6">
                 <img class="forside" src="bilder/stickers/juletreSticker.png">
                 <h1 class="bakside">?</h1>
             </div>

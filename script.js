@@ -3,9 +3,45 @@
 
     const kort = document.querySelectorAll('.memoryKort')
 
+    let harFlippetKort = false
+    let førsteKort, andreKort
+
     function flipKort() { 
-        this.classList.toggle('flip')
+        this.classList.add('flip')
+    
+
+    if (!harFlippetKort){
+        harFlippetKort = true
+        førsteKort = this
+        return;
     }
+ 
+    andreKort = this;
+    harFlippetKort = false;
+ 
+    checkForMatch();
+  }
+ 
+  function checkForMatch() {
+    if (førsteKort.dataset.framework === andreKort.dataset.framework) {
+      disableKort();
+      return;
+    }
+ 
+    unflipKort();
+  }
+ 
+  function disableKort() {
+    førsteKort.removeEventListener('click', flipKort);
+    andreKort.removeEventListener('click', flipKort);
+  }
+ 
+  function unflipKort() {
+    setTimeout(() => {
+      førsteKort.classList.remove('flip');
+      andreKort.classList.remove('flip');
+    }, 900);
+  }
 
     kort.forEach(kortet => kortet.addEventListener('click', flipKort))
 
