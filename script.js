@@ -71,6 +71,7 @@ let spillSlutt = false
         kort.forEach(kortet => {
             kortet.classList.remove('flip')
             kortet.addEventListener('click', flipKort)
+            klokke = 60
         })
 
         
