@@ -94,6 +94,10 @@ function tikkKlokke() {
   console.log(klokkeElement)
   klokkeElement.innerHTML = klokke + " sek"
 
+  if (klokke <= 10){
+    klokkeElement.style.color = "red"
+  }
+
   if (klokke <= 0){
     clearInterval(klokkeref)
     spillSlutt = true
