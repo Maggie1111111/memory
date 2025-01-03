@@ -8,7 +8,10 @@
     let førsteKort, andreKort
 
     function flipKort() { 
+
         if (låsBrett) return
+        if (this === førsteKort) return;
+
         this.classList.add('flip')
     
 
@@ -46,7 +49,7 @@
       andreKort.classList.remove('flip');
 
       låsBrett = false
-      
+
     }, 900);
   }
 
