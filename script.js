@@ -1,3 +1,5 @@
+let spillSlutt = false
+
 
 //flippe kortene
 
@@ -82,8 +84,25 @@
 
 
 //klokke 
+const klokkeElement = document.getElementById('klokke')
 
+let klokke = 60
+let klokkeref = null
 
+function tikkKlokke() {
+  klokke -= 1
+  console.log(klokkeElement)
+  klokkeElement.innerHTML = klokke + " sek"
+
+  if (klokke <= 0){
+    clearInterval(klokkeref)
+    spillSlutt = true
+  }
+}
+
+if (!klokkeref) {
+  klokkeref = setInterval(tikkKlokke, 1000)
+}
 //julemodus
 const julemodeElement = document.getElementById('juleMode')
 
