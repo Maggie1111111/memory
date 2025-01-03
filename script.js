@@ -22,7 +22,7 @@
     }
  
     andreKort = this;
-    harFlippetKort = false;
+    harFlippetKort = false
  
     checkForMatch();
   }
@@ -44,13 +44,13 @@
   function unflipKort() {
     låsBrett = true
 
-    setTimeout(() => {
-      førsteKort.classList.remove('flip');
-      andreKort.classList.remove('flip');
+    setTimeout(function () {
+      førsteKort.classList.remove('flip')
+      andreKort.classList.remove('flip')
 
       låsBrett = false
 
-    }, 900);
+    }, 900)
   }
 
     kort.forEach(kortet => kortet.addEventListener('click', flipKort))
@@ -65,6 +65,17 @@
       shuffle()
 
       function restart(){
+
+        kort.forEach(kortet => {
+            kortet.classList.remove('flip')
+            kortet.addEventListener('click', flipKort)
+        })
+
+        
+        harFlippetKort = false
+        førsteKort = null
+        andreKort = null
+
         shuffle()
       }
 
