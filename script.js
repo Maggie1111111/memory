@@ -4,9 +4,11 @@
     const kort = document.querySelectorAll('.memoryKort')
 
     let harFlippetKort = false
+    let låsBrett = false
     let førsteKort, andreKort
 
     function flipKort() { 
+        if (låsBrett) return
         this.classList.add('flip')
     
 
@@ -37,9 +39,14 @@
   }
  
   function unflipKort() {
+    låsBrett = true
+
     setTimeout(() => {
       førsteKort.classList.remove('flip');
       andreKort.classList.remove('flip');
+
+      låsBrett = false
+      
     }, 900);
   }
 
@@ -54,11 +61,9 @@
 
       shuffle()
 
-      document.getElementById('restart').addEventListener('click', () => {
+      function restart(){
         shuffle()
-
-        kort.forEach(kortet => kortet.classList.remove('flip'))
-    })
+      }
 
 
 
