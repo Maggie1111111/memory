@@ -45,6 +45,21 @@
 
     kort.forEach(kortet => kortet.addEventListener('click', flipKort))
 
+    function shuffle() {
+        kort.forEach(kortet => {
+          let ramdomPos = Math.floor(Math.random() * 12)
+          kortet.style.order = ramdomPos
+        })
+      }
+
+      shuffle()
+
+      document.getElementById('restart').addEventListener('click', () => {
+        shuffle()
+
+        kort.forEach(kortet => kortet.classList.remove('flip'))
+    })
+
 
 
 //klokke 
