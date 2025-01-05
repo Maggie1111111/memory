@@ -251,7 +251,7 @@
         </a>
         <div class="klokke" id="klokkecss">
             <h1>Klokke</h1>
-            <p id="klokke">05:00</p>
+            <p id="klokke">180 sek</p>
         </div>
     </nav>
 
@@ -451,6 +451,50 @@
     </div>
 
     <script src="script.js"></script>
+    <script>
+
+        //klokke
+        const klokkeElement = document.getElementById('klokke')
+
+        let klokke = 180
+        let klokkeref = null
+
+        function tikkKlokke() {
+        klokke -= 1
+        console.log(klokkeElement)
+        klokkeElement.innerHTML = klokke + " sek"
+
+        if (klokke <= 10){
+            klokkeElement.style.color = "red"
+        }
+
+        if (klokke <= 0){
+            clearInterval(klokkeref)
+            spillSlutt = true
+        }
+        }
+
+        if (!klokkeref) {
+        klokkeref = setInterval(tikkKlokke, 1000)
+        }
+
+        //restart knapp
+        function restart(){
+
+        kort.forEach(kortet => {
+            kortet.classList.remove('flip')
+            kortet.addEventListener('click', flipKort)
+            klokke = 180
+        })
+
+
+        harFlippetKort = false
+        førsteKort = null
+        andreKort = null
+
+        shuffle()
+        }
+    </script>
 </body>
 
 </html>

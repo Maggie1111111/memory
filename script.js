@@ -26,16 +26,16 @@ let spillSlutt = false
     andreKort = this;
     harFlippetKort = false
  
-    checkForMatch();
+    checkForMatch()
   }
  
   function checkForMatch() {
     if (førsteKort.dataset.framework === andreKort.dataset.framework) {
-      disableKort();
+      disableKort()
       return;
     }
  
-    unflipKort();
+    unflipKort() 
   }
  
   function disableKort() {
@@ -66,48 +66,7 @@ let spillSlutt = false
 
       shuffle()
 
-      function restart(){
 
-        kort.forEach(kortet => {
-            kortet.classList.remove('flip')
-            kortet.addEventListener('click', flipKort)
-            klokke = 60
-        })
-
-        
-        harFlippetKort = false
-        førsteKort = null
-        andreKort = null
-
-        shuffle()
-      }
-
-
-
-//klokke 
-const klokkeElement = document.getElementById('klokke')
-
-let klokke = 60
-let klokkeref = null
-
-function tikkKlokke() {
-  klokke -= 1
-  console.log(klokkeElement)
-  klokkeElement.innerHTML = klokke + " sek"
-
-  if (klokke <= 10){
-    klokkeElement.style.color = "red"
-  }
-
-  if (klokke <= 0){
-    clearInterval(klokkeref)
-    spillSlutt = true
-  }
-}
-
-if (!klokkeref) {
-  klokkeref = setInterval(tikkKlokke, 1000)
-}
 //julemodus
 const julemodeElement = document.getElementById('juleMode')
 
