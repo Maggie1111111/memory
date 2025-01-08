@@ -152,6 +152,12 @@
             backface-visibility: hidden;
             height: 100%;
             transform: rotateY(180deg);
+            display: flex;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            font-size: 60px;
+            color: rgb(10, 10, 84);
         }
 
         .bakside {
@@ -259,82 +265,114 @@
         <h2>MEMORY SPILL</h2>
         <div class="spill">
             <div class="memoryKort" data-framework="1">
-                <img class="forside" src="bilder/stickers/juletreSticker.png">
+                <div class="forside">
+                    <i class="fa-solid fa-ghost"></i>
+                </div>
                 <h1 class="bakside">?</h1>
             </div>
 
             <div class="memoryKort" data-framework="1">
-                <img class="forside" src="bilder/stickers/juletreSticker.png">
+                <div class="forside">
+                    <i class="fa-solid fa-ghost"></i>
+                </div>
                 <h1 class="bakside">?</h1>
             </div>
 
             <div class="memoryKort" data-framework="2">
-                <img class="forside" src="bilder/stickers/juletreSticker.png">
+                <div class="forside">
+                    <i class="fa-solid fa-dragon"></i>
+                </div>
                 <h1 class="bakside">?</h1>
             </div>
 
             <div class="memoryKort" data-framework="2">
-                <img class="forside" src="bilder/stickers/juletreSticker.png">
+                <div class="forside">
+                    <i class="fa-solid fa-dragon"></i>
+                </div>
                 <h1 class="bakside">?</h1>
             </div>
 
             <div class="memoryKort" data-framework="3">
-                <img class="forside" src="bilder/stickers/juletreSticker.png">
+                <div class="forside">
+                    <i class="fa-solid fa-ring"></i>
+                </div>
                 <h1 class="bakside">?</h1>
             </div>
 
             <div class="memoryKort" data-framework="3">
-                <img class="forside" src="bilder/stickers/juletreSticker.png">
+                <div class="forside">
+                    <i class="fa-solid fa-ring"></i>
+                </div>
                 <h1 class="bakside">?</h1>
             </div>
 
             <div class="memoryKort" data-framework="4">
-                <img class="forside" src="bilder/stickers/juletreSticker.png">
+                <div class="forside">
+                    <i class="fa-solid fa-hat-wizard"></i>
+                </div>
                 <h1 class="bakside">?</h1>
             </div>
 
             <div class="memoryKort" data-framework="4">
-                <img class="forside" src="bilder/stickers/juletreSticker.png">
+                <div class="forside">
+                    <i class="fa-solid fa-hat-wizard"></i>
+                </div>
                 <h1 class="bakside">?</h1>
             </div>
 
             <div class="memoryKort" data-framework="5">
-                <img class="forside" src="bilder/stickers/juletreSticker.png">
+                <div class="forside">
+                    <i class="fa-solid fa-chess-knight"></i>
+                </div>
                 <h1 class="bakside">?</h1>
             </div>
 
             <div class="memoryKort" data-framework="5">
-                <img class="forside" src="bilder/stickers/juletreSticker.png">
+                <div class="forside">
+                    <i class="fa-solid fa-chess-knight"></i>
+                </div>
                 <h1 class="bakside">?</h1>
             </div>
 
             <div class="memoryKort" data-framework="6">
-                <img class="forside" src="bilder/stickers/juletreSticker.png">
+                <div class="forside">
+                    <i class="fa-solid fa-dungeon"></i>
+                </div>
                 <h1 class="bakside">?</h1>
             </div>
 
             <div class="memoryKort" data-framework="6">
-                <img class="forside" src="bilder/stickers/juletreSticker.png">
+                <div class="forside">
+                    <i class="fa-solid fa-dungeon"></i>
+                </div>
                 <h1 class="bakside">?</h1>
             </div>
 
             <div class="memoryKort" data-framework="7">
-                <img class="forside" src="bilder/stickers/juletreSticker.png">
+                <div class="forside">
+                    <i class="fa-solid fa-wand-sparkles"></i>
+                </div>
                 <h1 class="bakside">?</h1>
             </div>
 
             <div class="memoryKort" data-framework="7">
-                <img class="forside" src="bilder/stickers/juletreSticker.png">
+                <div class="forside">
+                    <i class="fa-solid fa-wand-sparkles"></i>
+                </div>
                 <h1 class="bakside">?</h1>
             </div>
 
             <div class="memoryKort" data-framework="8">
-                <img class="forside" src="bilder/stickers/juletreSticker.png">
+                <div class="forside">
+                    <i class="fa-solid fa-shield-halved"></i>
+                </div>
                 <h1 class="bakside">?</h1>
             </div>
 
             <div class="memoryKort" data-framework="8">
-                <img class="forside" src="bilder/stickers/juletreSticker.png">
+                <div class="forside">
+                    <i class="fa-solid fa-shield-halved"></i>
+                </div>
                 <h1 class="bakside">?</h1>
             </div>
         </div>
@@ -377,23 +415,9 @@
         klokkeref = setInterval(tikkKlokke, 1000)
         }
 
-        //restart knapp
-        function restart(){
 
-        kort.forEach(kortet => {
-            kortet.classList.remove('flip')
-            kortet.addEventListener('click', flipKort)
-            klokke = 75
-        })
-
-
-        harFlippetKort = false
-        førsteKort = null
-        andreKort = null
-
-        shuffle()
-        }
     </script>
+</body>
 </body>
 
 </html>

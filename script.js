@@ -65,6 +65,22 @@ let spillSlutt = false
       }
 
       shuffle()
+              //restart knapp
+              function restart(){
+
+                kort.forEach(kortet => {
+                    kortet.classList.remove('flip')
+                    kortet.addEventListener('click', flipKort)
+                    klokke = 75
+                })
+        
+        
+                harFlippetKort = false
+                førsteKort = null
+                andreKort = null
+        
+                shuffle()
+                }
 
 
 //julemodus
