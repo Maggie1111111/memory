@@ -1,5 +1,3 @@
-let spillSlutt = false
-
 
 //flippe kortene
 

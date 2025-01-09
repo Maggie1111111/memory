@@ -557,31 +557,12 @@
         if (klokke < 0){
             clearInterval(klokkeref)
             alert("tiden er ute, du tapte! :(")
-            spillslutt = true
             omstart()
-      
         }
         }
 
         if (!klokkeref) {
         klokkeref = setInterval(tikkKlokke, 1000)
-        }
-
-        //restart knapp
-        function restart(){
-
-        kort.forEach(kortet => {
-            kortet.classList.remove('flip')
-            kortet.addEventListener('click', flipKort)
-            klokke = 180
-        })
-
-
-        harFlippetKort = false
-        førsteKort = null
-        andreKort = null
-
-        shuffle()
         }
     </script>
 </body>
