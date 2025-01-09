@@ -65,10 +65,23 @@ let spillSlutt = false
       }
 
       shuffle()
-              //restart knapp
-                function omstart(){
-                  location.reload()
-                }
+
+      //restart knapp
+      function omstart(){
+        location.reload()
+      }
+
+      //vinne-funksjon
+      /*function duVant(){
+        alert("Du vant!")
+        omstart()
+      }
+
+      function sjekkvinner()
+      */
+ 
+
+
 
 
 //julemodus

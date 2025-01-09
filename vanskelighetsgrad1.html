@@ -387,9 +387,12 @@
             klokkeElement.style.color = "red"
         }
 
-        if (klokke <= 0){
+        if (klokke < 0){
             clearInterval(klokkeref)
-            spillSlutt = true
+            alert("tiden er ute, du tapte! :(")
+            spillslutt = true
+            omstart()
+      
         }
         }
 
