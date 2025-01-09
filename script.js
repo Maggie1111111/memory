@@ -70,13 +70,6 @@
       }
 
       //vinne-funksjon
-      /*function duVant(){
-        alert("Du vant!")
-        omstart()
-      }
-
-      function sjekkvinner()
-      */
  
 
 
