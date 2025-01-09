@@ -21,12 +21,21 @@
             width: 100%;
         }
 
+        :root{
+            --lys-blaa: rgb(55, 55, 158);
+            --mørk-blaa: rgb(10, 10, 84);
+            --blå-skygge: rgb(23, 5, 105);
+            --nav-rød: rgb(183, 4, 4);
+            --mørk-rød: rgb(124, 5, 5);
+            --rød-skygge: rgb(116, 3, 3);
+        }
+
         body {
             display: flex;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
-            background-color: rgb(10, 10, 84);
+            background-color: var(--mørk-blaa);
             flex-direction: column;
             user-select: none;
         }
@@ -38,9 +47,9 @@
             justify-content: center;
             align-items: center;
             gap: 30px;
-            background-color: rgb(55, 55, 158);
+            background-color: var(--lys-blaa);
             padding: 50px 60px;
-            border-radius: 3%;
+            border-radius: 20px;
         }
 
         h2 {
@@ -55,7 +64,7 @@
             margin-top: 20px;
             padding: 15px 20px;
             height: 65px;
-            color: rgb(10, 10, 84);
+            color: var(--mørk-blaa);
             border: none;
             font-size: 25px;
             letter-spacing: 3px;
@@ -66,7 +75,7 @@
 
         .restart:hover {
             color: white;
-            background-color: rgb(10, 10, 84);
+            background-color: var(--mørk-blaa);
         }
 
         .spill {
@@ -84,7 +93,7 @@
             width: 100px;
             height: 100px;
             border-radius: 5px;
-            box-shadow: 10px 10px 10px rgb(23, 5, 105);
+            box-shadow: 10px 10px 10px var(--blå-skygge);
             cursor: pointer;
             position: relative;
             display: flex;
@@ -107,7 +116,7 @@
 
         nav {
             height: 70px;
-            background-color: rgb(55, 55, 158);
+            background-color: var(--lys-blaa));
             width: 100%;
             margin-bottom: 50px;
             display: flex;
@@ -117,22 +126,22 @@
 
         .fa-home {
             background-color: white;
-            border-radius: 5%;
+            border-radius: 3px;
             padding: 5px 10px;
-            color: rgb(10, 10, 84);
-            font-size: 30px;
+            color: var(--mørk-blaa);
+            font-size: 40px;
             margin-inline: 15px;
         }
 
         .fa-home:hover {
-            background-color: rgb(10, 10, 84);
+            background-color: var(--mørk-blaa);
             color: white;
         }
 
         .klokke {
             background-color: white;
-            color: rgb(10, 10, 84);
-            border-radius: 5%;
+            color: var(--mørk-blaa);
+            border-radius: 3px;
             padding: 5px 10px;
             margin-inline: 15px;
             display: flex;
@@ -160,7 +169,7 @@
             justify-content: center;
             align-items: center;
             font-size: 60px;
-            color: rgb(10, 10, 84);
+            color: var(--mørk-blaa);
         }
 
         .bakside {
@@ -170,7 +179,7 @@
             justify-content: center;
             align-items: center;
             backface-visibility: hidden;
-            background-color: rgb(10, 10, 84);
+            background-color: var(--mørk-blaa);
         }
 
         #juleMode {
@@ -192,7 +201,7 @@
         }
 
         .toggleSirkel {
-            background-color: rgb(55, 55, 158);
+            background-color: var(--lys-blaa);
             width: 45px;
             height: 45px;
             border-radius: 999px;
@@ -211,7 +220,7 @@
         }
 
         body.jule-modus nav {
-            background-color: rgb(183, 4, 4);
+            background-color: var(--nav-rød);
             /* Update nav color */
         }
 
@@ -241,21 +250,21 @@
             background-color: red;
             background-image: linear-gradient(45deg, white 25%, transparent 25.5%, transparent 50%, white 50.5%, white 75%, transparent 75.5%, transparent);
             background-size: 50px 50px;
-            color: rgb(124, 5, 5);
+            color: var(--mørk-rød);
 
         }
 
         body.jule-modus .forside {
             background-color: white;
-            color: rgb(124, 5, 5);
+            color: var(--mørk-rød);
         }
 
         body.jule-modus .container {
-            background-color: rgb(183, 4, 4);
+            background-color: var(--nav-rød);
         }
 
         body.jule-modus .memoryKort {
-            box-shadow: 10px 10px 10px rgb(116, 3, 3);
+            box-shadow: 10px 10px 10px var(--rød-skygge);
         }
     </style>
 </head>
