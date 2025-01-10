@@ -11,16 +11,11 @@ img {
     width: 100%;
 }
 
-:root {
-    --lys-blaa: rgb(55, 55, 158);
-    --mørk-blaa: rgb(10, 10, 84);
-    --blå-skygge: rgb(23, 5, 105);
-    --nav-rød: rgb(183, 4, 4);
-    --mørk-rød: rgb(124, 5, 5);
-    --rød-skygge: rgb(116, 3, 3);
+.bodyhjemside{
+
 }
 
-body {
+.bodyspill{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -29,8 +24,15 @@ body {
     flex-direction: column;
     user-select: none;
 }
-
-.container {
+:root {
+    --lys-blaa: rgb(55, 55, 158);
+    --mørk-blaa: rgb(10, 10, 84);
+    --blå-skygge: rgb(23, 5, 105);
+    --nav-rød: rgb(183, 4, 4);
+    --mørk-rød: rgb(124, 5, 5);
+    --rød-skygge: rgb(116, 3, 3);
+}
+.container{
     position: relative;
     display: flex;
     flex-direction: column;
@@ -68,17 +70,6 @@ h2 {
     background-color: var(--mørk-blaa);
 }
 
-.spill {
-    width: 440px;
-    height: 440px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    perspective: 1000px;
-    gap: 20px;
-
-}
-
 .memoryKort {
     width: 100px;
     height: 100px;
@@ -106,7 +97,7 @@ h2 {
 
 nav {
     height: 70px;
-    background-color: var(--lys-blaa));
+    background-color: var(--lys-blaa);
     width: 100%;
     margin-bottom: 50px;
     display: flex;
@@ -255,4 +246,38 @@ body.jule-modus .container {
 
 body.jule-modus .memoryKort {
     box-shadow: 10px 10px 10px var(--rød-skygge);
+}
+
+
+#spill1{
+    width: 440px;
+    height: 440px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    perspective: 1000px;
+    gap: 20px;
+}
+
+
+#spill2{
+    width: 500px;
+    height: 440px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    transform-style: preserve-3d;
+    perspective: 500px;
+    justify-content: center;
+}
+
+#spill3{
+    width: 800px;
+    height: 700px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    transform-style: preserve-3d;
+    perspective: 500px;
+    justify-content: center;
 }
