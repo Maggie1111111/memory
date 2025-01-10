@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Handjet:wght@100..900&display=swap');
 //minimal css reset
 *{
     margin: 0;
@@ -12,7 +13,7 @@ img{
 //nav
 nav{
     height: 70px;
-    background-color: rgb(183, 4, 4);
+    background-color: ;
     width: 100%;
     margin-bottom: 50px;
     display: flex;
@@ -24,12 +25,6 @@ nav{
 }
 
 //generelt
-body{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-}
 
 //vanskelighetsgrad 1
 body {
@@ -55,8 +50,8 @@ body {
 }
 
 h2 {
-    font-size: 70px;
-    color: white;
+    font-size: 90px;
+    color: rgb(55, 55, 158);
     letter-spacing: 5px;
     text-align: center;
     font-family: 'Handjet';
