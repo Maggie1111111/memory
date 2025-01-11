@@ -6,21 +6,139 @@
     <title>Mitt memory spill</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/f6aa59a7b7.js" crossorigin="anonymous"></script>
-    <script src="script.js"></script>
     <style>
          *{
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: "Handjet", sans-serif;
+            font-family: 'Courier New', Courier, monospace;
+            color: rgb(55, 55, 158);
         }
 
         img{
             width: 100%;
         }
+        main{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        h2{
+            color: rgb(55, 55, 158);
+            font-size: 100px;
+            font-family: "Handjet", sans-serif;
+        }
+        nav {
+            height: 100px;
+            background-color: white;
+            border-bottom: solid rgb(55, 55, 158) 1px;
+        }
+        .fa-home {
+            font-size: 50px;
+        }
+
+        .containerIndex{
+            width: 85%;
+            height: 80px ;  
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 200px;
+            perspective: 1000px;
+        }
+        .containervanskgrad{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .vanskgrad:hover{
+            transform: scale(0.9);
+            transition: transform 0.2s;
+
+        }
+        .vanskgrad{
+            background-color: rgb(55, 55, 158);
+            width: 350px;
+            height: 350px;
+            border-radius: 10px; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transform: scale(1);
+            transform-style: preserve-3d;
+            transition: transform .5s;
+        
+        }
+        p{
+            margin-top: 10px;
+            font-size: 25px;
+        }
+        .fa-face-smile, .fa-face-frown-open, .fa-face-dizzy{
+            color: white;
+            font-size: 200px;
+        }
+        @media (width <= 1250px){
+            .vanskgrad{
+                width: 300px;
+                height: 300px;
+            }
+        }
+        @media (width <= 1079px){
+            .containerIndex{
+                flex-direction: column;
+                height: 1600px;
+                margin-top: 100px;
+                
+            }
+            .vanskgrad{
+                width: 500px;
+                height: 500px;
+            }
+            p{
+                display: none;
+            }
+        }
     </style>
 </head>
 <body>
-    
+    <nav>
+        <a href="index.html">
+            <i class="fa-solid fa-home" id="hjemknapp"></i>
+        </a>
+    </nav>
+    <main>
+    <h2>MEMORY SPILL</h2>
+
+    <div class="containerIndex">
+        <div class="containervanskgrad">
+        <a href="vanskelighetsgrad1.html">
+            <div class="vanskgrad">
+                <i class="fa-solid fa-face-smile"></i>
+            </div>
+        </a>
+        <p>vanskelighetsgrad 1</p>
+        </div>
+        <div class="containervanskgrad">
+        <a href="vanskelighetsgrad2.html">
+            <div class="vanskgrad">
+                <i class="fa-solid fa-face-frown-open"></i>
+            </div>
+        </a>
+        <p>vanskelighetsgrad 2</p>
+        </div>
+        <div class="containervanskgrad">
+        <a href="vanskelighetsgrad3.html">
+            <div class="vanskgrad">
+                <i class="fa-solid fa-face-dizzy"></i>
+            </div>
+        </a>
+        <p>vanskelighetsgrad 3</p>
+        </div>
+    </div>
+        <div>
+
+        </div>
+    </main>
 </body>
 </html>

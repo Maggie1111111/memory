@@ -8,9 +8,12 @@
     let førsteKort, andreKort
 
     function flipKort() { 
+      const flipSound = new Audio('flipcard-91468.mp3')
 
         if (låsBrett) return
         if (this === førsteKort) return;
+
+        flipSound.play()
 
         this.classList.add('flip')
     
@@ -27,9 +30,18 @@
     checkForMatch()
   }
  
+  let poeng = 0
+   
+
   function checkForMatch() {
     if (førsteKort.dataset.framework === andreKort.dataset.framework) {
+      poeng += 1
       disableKort()
+
+      if(poeng == makspoeng){
+        alert('Du vant!')
+        omstart()
+      }
       return;
     }
  
@@ -68,8 +80,6 @@
       function omstart(){
         location.reload()
       }
-
-      //vinne-funksjon
 
 
 
