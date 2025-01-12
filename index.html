@@ -8,19 +8,24 @@
     <link rel="icon" type="image/jpg" href="bilder/favicon/favicon.png">
     <script src="https://kit.fontawesome.com/f6aa59a7b7.js" crossorigin="anonymous"></script>
     <style>
-         *{
+        :root {
+            --lys-blaa: rgb(55, 55, 158);
+            --mørk-blaa: rgb(10, 10, 84);
+            --blå-skygge: rgb(5, 5, 52);
+        }
+        *{
             margin: 0;
             padding: 0;
             box-sizing: border-box;
             font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-            color: rgb(55, 55, 158);
+            color: var(--lys-blaa);
         }
 
         img{
             width: 100%;
         }
         body{
-            background-color: rgb(10, 10, 84);
+            background-color: var(--mørk-blaa);
         }
         main{
             display: flex;
@@ -52,12 +57,12 @@
             font-size: 25px;
         }
         .fa-home {
-            color: rgb(55, 55, 158);
+            color: var(--lys-blaa);
             font-size: 50px;
         }
 
         .fa-home:hover {
-            background-color: rgb(55, 55, 158);
+            background-color: var(--lys-blaa);
         }
 
         .containerIndex{
@@ -81,7 +86,7 @@
 
         }
         .vanskgrad{
-            background-color: rgb(55, 55, 158);
+            background-color: var(--lys-blaa);
             width: 350px;
             height: 350px;
             border-radius: 10px; 
@@ -91,7 +96,7 @@
             transform: scale(1);
             transform-style: preserve-3d;
             transition: transform .5s;
-            box-shadow: 20px 10px 20px rgb(5, 5, 52);
+            box-shadow: 20px 10px 20px var(--blå-skygge);
         
         }
         .fa-face-smile, .fa-face-frown-open, .fa-face-dizzy{
@@ -102,7 +107,7 @@
             padding: 50px;
             height: 450px;
             width: 80%;
-            background-color: rgb(55, 55, 158);
+            background-color: var(--lys-blaa);
             border-top-left-radius: 20px;
             border-top-right-radius: 500px;
         }
