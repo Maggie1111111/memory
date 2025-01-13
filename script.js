@@ -39,8 +39,10 @@
       disableKort()
 
       if(poeng == makspoeng){
-        alert('Du vant!')
-        omstart()
+        setTimeout(function(){
+          alert('Du vant!')
+          omstart()
+        }, 1000)
       }
       return;
     }
